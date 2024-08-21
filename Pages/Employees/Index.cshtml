@@ -1,0 +1,36 @@
+﻿@page
+@model Assignment.Pages.Employees.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+}
+<p>
+    <a class="btn register-btn" asp-page="Register">Register Now</a>
+</p>
+<p>
+    <a class="btn find-employee-btn" asp-page="Report">Skill Search</a>
+</p>
+
+@foreach (var item in Model.Employee)
+{
+    <div class="employee-box">
+        <div class="employee-info">
+            <img src="@item.PhotoPath" alt="Employee Photo">
+            <h2>@item.FirstName @item.LastName</h2>
+            <p>Employee ID: @item.EmpId</p>
+
+        </div>
+        <div class="button-group">
+            <a class="btn" asp-page="./Edit" asp-route-id="@item.Id">Edit</a>
+            <a class="btn" asp-page="./Details" asp-route-id="@item.Id">Details</a>
+            <a class="btn" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            <a class="btn" asp-page="./SkillAssesmentDetails" asp-route-id="@item.EmpId">SkillAssessment</a>
+        </div>
+    </div>
+}

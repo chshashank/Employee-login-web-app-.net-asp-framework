@@ -1,0 +1,12 @@
+﻿@page
+@model Assignment.Pages.Employees.approvalModel
+@{
+    ViewData["Title"] = "Approval";
+}
+<h2>Manager Approval</h2>
+
+
+    <form method="post">
+        <button type="submit" name="approval" value="accept" class="btn btn-success">Accept</button>
+        <button type="submit" name="approval" value="reject" class="btn btn-danger">Reject</button>
+    </form>

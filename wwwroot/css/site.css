@@ -1,0 +1,95 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.employee-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.employee-info {
+    flex: 1;
+}
+
+    .employee-info img {
+        width: 100px; /* Adjust as needed */
+        height: 100px; /* Adjust as needed */
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .employee-info h2 {
+        margin: 0;
+    }
+
+.button-group {
+    flex-shrink: 0;
+}
+
+    .button-group .btn {
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+        .button-group .btn:hover {
+            background-color: #0056b3;
+        }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+.register-btn {
+    margin-right: 10px; /* Adjust spacing between buttons if needed */
+}
+
+.find-employee-btn {
+    background-color: #28a745; /* Change color to green */
+}
+
+    .find-employee-btn:hover {
+        background-color: #218838; /* Darker green on hover */
+    }

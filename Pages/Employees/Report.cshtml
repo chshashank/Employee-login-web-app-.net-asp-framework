@@ -1,0 +1,79 @@
+﻿@page
+@model Assignment.Pages.Employees.ReportModel
+@{
+    ViewData["Title"] = "Employee Skill Report";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Skill Report</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <h1>Employee Skill Report</h1>
+
+    <form method="post" class="skill-form">
+        <label>Select Skills:</label><br />
+        <input type="checkbox" name="selectedSkills" value="BasicUnderstanding" /> BasicUnderstanding <br />
+        <input type="checkbox" name="selectedSkills" value="WorkingExperience" /> WorkingExperience <br />
+        <input type="checkbox" name="selectedSkills" value="ExtensiveExperience" /> ExtensiveExperience <br />
+        <input type="checkbox" name="selectedSkills" value="SubjectMatterExperience" /> SubjectMatterExperience <br />
+        <input type="checkbox" name="selectedSkills" value="Database" /> Database <br />
+        <input type="checkbox" name="selectedSkills" value="Programming" /> Programming <br />
+        <input type="checkbox" name="selectedSkills" value="Java" /> Java <br />
+        <input type="checkbox" name="selectedSkills" value="CSharp" /> CSharp <br />
+        <input type="checkbox" name="selectedSkills" value="Python" /> Python <br />
+        <input type="checkbox" name="selectedSkills" value="WebProgramming" /> WebProgramming <br />
+        <input type="checkbox" name="selectedSkills" value="OtherTechnicalSkills" /> OtherTechnicalSkills <br />
+        <input type="checkbox" name="selectedSkills" value="VerbalCommunication" /> VerbalCommunication <br />
+        <input type="checkbox" name="selectedSkills" value="WrittenCommunication" /> WrittenCommunication <br />
+        <input type="checkbox" name="selectedSkills" value="ForeignLanguage" /> ForeignLanguage <br />
+        <input type="checkbox" name="selectedSkills" value="Teamwork" /> Teamwork <br />
+        <input type="checkbox" name="selectedSkills" value="ProblemSolving" /> ProblemSolving <br />
+        <input type="checkbox" name="selectedSkills" value="DecisionMaking" /> DecisionMaking <br />
+        <input type="checkbox" name="selectedSkills" value="Leadership" /> Leadership <br />
+        <button type="submit">Generate Report</button>
+    </form>
+
+    @if (Model != null && Model.EmployeeDetails != null && Model.EmployeeDetails.Any())
+    {
+        <h2>Matching Employees</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Job Role</th>
+                    <th>Contact Number</th>
+                    <th>Details</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model.EmployeeDetails)
+                {
+                    <tr>
+                        <td>@employee.FirstName @employee.LastName</td>
+                        <td>@employee.JobRole</td>
+                        <td>@employee.ContactNumber</td>
+                        <td><a asp-page="./Details" asp-route-id="@employee.Id">Details</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No matching employees found.</p>
+    }
+
+    <div>
+        <a class="btn" asp-page="./Index" class="back-link">Back to List</a>
+    </div>
+
+</body>
+</html>
+
+

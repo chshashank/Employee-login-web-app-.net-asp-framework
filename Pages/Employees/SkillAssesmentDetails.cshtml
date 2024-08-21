@@ -1,0 +1,124 @@
+﻿@page 
+@model Assignment.Pages.Employees.SkillAssesmentDetailsModel
+@{
+}
+<h1>Details</h1>
+
+<div>
+    <h4>SkillAssesment</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.BasicUnderstanding)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.BasicUnderstanding)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.WorkingExperience)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.WorkingExperience)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.ExtensiveExperience)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.ExtensiveExperience)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.SubjectMatterExperience)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.SubjectMatterExperience)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.Database)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.Database)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.Programming)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.Programming)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.Java)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.Java)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.CSharp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.CSharp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.Python)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.Python)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.WebProgramming)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.WebProgramming)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.OtherTechnicalSkills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.OtherTechnicalSkills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.VerbalCommunication)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.VerbalCommunication)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.WrittenCommunication)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.WrittenCommunication)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.ForeignLanguage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.ForeignLanguage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.Teamwork)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.Teamwork)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.ProblemSolving)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.ProblemSolving)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.DecisionMaking)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.DecisionMaking)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillAssesment.Leadership)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SkillAssesment.Leadership)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn" asp-page="./SkillAssesment" asp-route-id="@Model.SkillAssesment.Id">Edit</a> |
+    <a class="btn" asp-page="./Index">Back to List</a>
+</div>
